@@ -8,7 +8,7 @@
       <button type="button" id="connect-wallet" class="button" @click.prevent="onConnect">
         Connect wallet
       </button>
-      <a href="https://twitter.com/fr000ts">
+      <a href="https://twitter.com/fr00ts">
         <img src="./images/follow.png" class=" fixed left-4 top-4" alt="">
       </a>
     </div>
