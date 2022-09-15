@@ -3,16 +3,17 @@
 
 <template>
 
-  <div class="side">
-    <div class="connect-button fixed right-0 top-0 z-20 " v-if="!getUserAccount">
-      <button type="button" id="connect-wallet" class="button" @click.prevent="onConnect">
+  <div class="side ">
+    <div class="connect-button fixed right-4 top-4 shadow-lg z-20 " v-if="!getUserAccount">
+      <button type="button" id="connect-wallet"
+        class="button bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"
+        @click.prevent="onConnect">
         Connect wallet
       </button>
-      <a href="https://twitter.com/fr00ts">
-        <img src="./images/follow.png" class=" fixed left-4 top-4" alt="">
-      </a>
+
     </div>
-    <div v-else class="col-auto" style="height: 145px">
+    <div v-else
+      class="button bg-gradient-to-r text-black from-yellow-500 to-yellow-100 fixed right-4 top-4 shadow-lg z-20">
       <h1 href="">CONNECTED</h1>
     </div>
     <div class="video-container">
@@ -21,14 +22,14 @@
 
       <div class="w-screen h-screen flex flex-col justify-between items-center content-center relative 
       transition-all ease-out duration-500">
-        <div class="relative mx-4 w-5/6 h-28 md:h-1/4 lg:h-1/3 mt-20 md:mt-12 transition-all ease-out duration-500 ">
+        <div class=" relative mx-4 w-5/6 h-28 md:h-1/4 lg:h-1/3 mt-20 md:mt-12 transition-all ease-out duration-500 ">
           <span>
             <img alt="Head" src="./images/headNEW.png"
               class="absolute inset-0 box-border p-0 m-auto block w-0 h-0 min-w-full max-w-full min-h-full max-h-full object-contain" />
           </span>
         </div>
         <div
-          class="relative mx-4 w-1/4 h-1/4 rad sm:p-0 md:h-1/4 lg:h-full md:mt-12 transition-all ease-out duration-500 ">
+          class="relative mx-4 w-1/2 h-1/2 rad sm:p-0 md:h-1/4 lg:h-1/2 md:mt-12 transition-all ease-out duration-500 ">
           <img alt="Head" src="./images/head.jpg"
             class=" rounded-3xl  min-w-full max-w-full min-h-full max-h-full object-contain" />
         </div>
@@ -39,13 +40,17 @@
                 class="absolute inset-0 box-border p-0 m-auto block w-0 h-0 min-w-full max-w-full min-h-full max-h-full object-contain" />
             </span>
           </div>
-        </div>
-        <div class="bananaglass">
-          <div class="t000tzBuut">
+        </div> <a href="https://twitter.com/fr00ts">
 
+          <div class="follow1 fixed bottom-4 z-50 left-4">
 
           </div>
-          <div>
+
+        </a>
+        <div class=" bananaglass grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 p-5 shadow-lg ">
+
+          <div
+            class="shadow-lg bg-green-100 text-orange-400  hover:text-orange-600 hover:bg-red-400 text-lg font-bold text-center p-10 rounded-lg row-span-2 ">
             <select class="inputmint" v-model="mintAmount">
               <option value="1">1</option>
               <option value="5">5</option>
@@ -55,41 +60,46 @@
               <option value="30">30</option>
             </select>
           </div>
-          <div class="button-info">
+          <div
+            class="button-info bg-green-100 text-orange-400  hover:text-orange-600 hover:bg-blue-400 text-lg font-bold text-center p-10 rounded-lg">
             <div v-if="!getUserAccount">
-              <a class="button" id="mint-button" href="#">10 000</a>
+
+              <span class="text-4xl md:text-6xl">10 000</span>
             </div>
-            <div v-else class="col-auto" style="height: 145px">
+            <div v-else>
               <div>
-                <button type="button" class="button _app_2DtRB mint" @click.prevent="mintToken">
+                <button type="button"
+                  class=" rounded-full bg-blue-600 text-white font-medium text-xs leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out  button _app_2DtRB mint"
+                  @click.prevent="mintToken">
                   <a class="button">
                     {{ mintText }}
                   </a>
                 </button>
               </div>
-              <div>
-                <h2 class="inputmint">{{ totalSupply }} / 10 000</h2>
+              <div class=" mt-4 inline-block">
+                <h2 class="inputmint ">{{ totalSupply }} / 10 000</h2>
               </div>
             </div>
             <br />
             <br />
-            <span class="price">0.0042 ETH each</span>
+            <span class="price">0.0069 ETH each</span>
           </div>
-          <div class="mint-info">
-            <span class="minted-description red-description"><a href="https://opensea.io/collection/fr00ts">Ethereum
-                Collection
+          <div
+            class="mint-info bg-green-100 text-orange-400  hover:text-orange-600 hover:bg-yellow-300 text-lg font-bold text-center p-10 rounded-lg row-span-2">
+            <span class="minted-description text-blue-500 to-blue-500 decoration-none text-2xl"><a
+                href="https://opensea.io/collection/fr00ts">Opensea
+                fr00ts
               </a></span>
-            <span class="minted-description red-description"><a
+            <span class="minted-description text-blue-500 text-4xl"><a
                 href="https://etherscan.io/address/0xC6cE183fB60AD4A05d207EE740AF50Ff0614Cf04">
                 Etherscan
               </a></span>
-            <span class="minted-description">minted</span>
-            <span class="minted-description">fr00ts left:</span>
+            <!-- <span class="minted-description  text-green-500 text-4xl">minted</span> -->
+            <span class="minted-description  text-green-700 text-2xl">fr00ts left:</span>
             <h2 class="effect-holo">{{ totalSupply }} / 10000</h2>
             <br />
             <br />
           </div>
-
         </div>
       </div>
     </div>
@@ -106,7 +116,7 @@ export default {
   name: "Header",
   data() {
     return {
-      cost: "0.0042",
+      cost: "0.0069",
       chainId: "1",
 
       mintAmount: 1,
@@ -250,7 +260,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -284,7 +294,8 @@ iframe {
 body {
   width: auto;
   height: 100vh;
-  font-family: Sans-Serif;
+  font-family: 'Bangers', cursive;
+
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0px;
@@ -311,43 +322,41 @@ body {
 
 .button {
   border-radius: 10px;
-  padding: 20px 15px;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: #000;
   text-transform: lowercase;
-  font-size: 28px;
-  width: 220px;
+  font-size: 24px;
+  width: 150px;
   line-height: 1.3em;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-align: center;
   transition: all 0.3s ease 0s;
 }
 
 .button:hover {
-  border-color: #3160ff;
-  color: #3160ff;
+  border-color: #ffbe31;
+  color: #ffbe31;
 }
 
 #mint-button:hover {
-  border-color: #ff0000;
-  color: #ff0000;
+  border-color: #ffbe31;
+  color: #ffbe31;
 }
 
 .inputmint {
-  border: 6px solid #000;
+  border: 2px dashed green;
   border-radius: 10px;
   padding: 20px 15px;
   align-items: center;
   justify-content: center;
-
   text-decoration: none;
   color: #000;
   text-transform: lowercase;
   font-size: 28px;
-  width: 220px;
+  width: 120px;
   line-height: 1.3em;
   font-weight: 600;
   letter-spacing: 2px;
@@ -356,7 +365,7 @@ body {
 }
 
 .button-info .price {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
 }
@@ -375,7 +384,15 @@ body {
   animation: 20s infinite bgcolorchange;
 }
 
+.follow1 {
+  background: url(./images/1.png);
+  width: 120px;
+  height: 70px;
+}
 
+.follow1:hover {
+  background: url(./images/2.png);
+}
 
 
 
@@ -438,6 +455,22 @@ select.mint-input {
 @media screen and (max-width: 800px) {
   .header {
     padding: 0 30px;
+  }
+
+  .button {
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000;
+    text-transform: lowercase;
+    font-size: 20px;
+    width: 140px;
+    line-height: 1.3em;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
   }
 
   iframe {
