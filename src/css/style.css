@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nabla&display=swap");
+
+* {
+  font-family: "Nabla", cursive;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0px;
+  background-color: #ff000000;
+  width: 100%;
+}

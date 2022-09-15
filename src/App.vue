@@ -77,7 +77,9 @@
                 </button>
               </div>
               <div class=" mt-4 inline-block">
-                <h2 class="inputmint ">{{ totalSupply }} / 10 000</h2>
+                <h2 class="inputmint ">{{ totalSupply }} </h2>
+                <h2 class="inputmint ">/ 10 000</h2>
+                <h2 class="inputmint border-0 ">LEFT</h2>
               </div>
             </div>
             <br />
@@ -260,7 +262,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -273,14 +275,6 @@ html {
 
 iframe {
   position: fixed;
-  /* top: 50%;
-  left: 50%;
-  scale: 1.6;
-  width: 100vw;
-  height: 100vh;
-  transform: translate(-50%, -50%);
-
- */
   scale: 1.6;
   pointer-events: none;
   z-index: -999;
@@ -294,7 +288,8 @@ iframe {
 body {
   width: auto;
   height: 100vh;
-  font-family: 'Bangers', cursive;
+  font-family: 'Nabla', cursive;
+
 
   background-repeat: no-repeat;
   background-attachment: fixed;
