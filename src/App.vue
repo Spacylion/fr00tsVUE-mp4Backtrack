@@ -17,10 +17,10 @@
       <h1 href="">CONNECTED</h1>
     </div>
     <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/yCYHHWZjuDg?controls=0&autoplay=1&mute=1&playsinline=1&loop=1&playlist=yCYHHWZjuDg"></iframe>
-
-      <div class="w-screen h-screen flex flex-col justify-between items-center content-center relative 
+      <video class="myVideo" autoplay muted loop id="myVideo">
+        <source class="myVideo" src="./assets/video/Crazy_Balls.mp4" type="video/mp4">
+      </video>
+      <div class=" w-screen h-screen flex flex-col justify-between items-center content-center relative 
       transition-all ease-out duration-500">
         <div class=" relative mx-4 w-5/6 h-28 md:h-1/4 lg:h-1/3 mt-20 md:mt-12 transition-all ease-out duration-500 ">
           <span>
@@ -271,6 +271,18 @@ html {
 .video-container {
   width: 100vw;
   height: 100vh;
+}
+
+.myVideo {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 
 iframe {

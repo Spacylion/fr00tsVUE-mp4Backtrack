@@ -10,6 +10,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   margin: 0px;
-  background-color: #ff000000;
+  /* background-color: #ff000000; */
   width: 100%;
 }
